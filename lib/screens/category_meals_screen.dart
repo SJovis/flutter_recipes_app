@@ -29,12 +29,12 @@ class CategoryMealsScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final meal = categoryMeals[index];
             return MealItem(
-              title: meal.title,
-              imageUrl: meal.imageUrl,
-              duration: meal.duration,
-              affordability: meal.affordability,
-              complexity: meal.complexity,
-            );
+                title: meal.title,
+                imageUrl: meal.imageUrl,
+                duration: meal.duration,
+                affordability: meal.affordability,
+                complexity: meal.complexity,
+                id: meal.id);
           },
           itemCount: categoryMeals.length,
         ),

@@ -23,16 +23,18 @@ class MyApp extends StatelessWidget {
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: const TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
               bodyText2: const TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
-              headline6: const TextStyle(
+              headline5: const TextStyle(
                 fontSize: 20.0,
                 fontFamily: 'RobotoCondensed',
                 fontWeight: FontWeight.bold,
               ),
             ),
       ),
-      home: const CategoriesScreen(),
+      // home: const CategoriesScreen(),
+      initialRoute: '/',
       routes: {
-        '/category-meals': (context) => const CategoryMealsScreen(),
+        '/': (context) => const CategoriesScreen(),
+        CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
       },
     );
   }

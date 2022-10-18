@@ -10,7 +10,7 @@ class CategoryItem extends StatelessWidget {
 
   void selectCategory(BuildContext context) {
     Navigator.of(context).pushNamed(
-      '/category-meals',
+      CategoryMealsScreen.routeName,
       arguments: {
         'id': id,
         'title': title,
@@ -38,10 +38,20 @@ class CategoryItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Center(
-            child: Text(
-          title,
-          style: Theme.of(context).textTheme.headline6,
-        )),
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.headline5!.copyWith(
+              color: Colors.grey.shade100,
+              shadows: [
+                const Shadow(
+                  offset: Offset(0.0, 5.0),
+                  blurRadius: 20.0,
+                  color: Color.fromARGB(50, 0, 0, 0),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

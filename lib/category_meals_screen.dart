@@ -19,6 +19,7 @@ class CategoryMealsScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {},
+        itemCount: 4,
       ),
     );
   }

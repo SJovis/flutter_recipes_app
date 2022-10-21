@@ -45,7 +45,7 @@ class MealDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 300,
               width: double.infinity,
               child: Image.network(
@@ -79,12 +79,12 @@ class MealDetailScreen extends StatelessWidget {
                         backgroundColor: Theme.of(context).colorScheme.primary,
                         child: Text(
                           '#${(index + 1)}',
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
                       title: Text(selectedMeal.steps[index]),
                     ),
-                    Divider(),
+                    const Divider(),
                   ]);
                 },
               ),

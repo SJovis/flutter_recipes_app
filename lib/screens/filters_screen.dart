@@ -55,6 +55,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 'lactose': _lactoseFree,
               };
               widget.saveFilters(selectedFilters);
+              Navigator.of(context).pushReplacementNamed('/');
             },
             icon: const Icon(Icons.save),
           ),
